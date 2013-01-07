@@ -64,6 +64,13 @@ public class MainActivity extends Activity {
          //startTimer = new Timer();
          //startTimer.schedule(task, when)
          
+         //TODO: prevent timer reset on orientation change
+         //      (move timer to own class?)
+         
+         //TODO: beep on complete
+         
+         //TODO: reset timer on prefs change
+         
         if(!timerRunning){
         
          startTimer();
@@ -75,7 +82,7 @@ public class MainActivity extends Activity {
     public void startTimer() {
     	timerRunning = true;
         
-    	numberOfSeconds = Integer.parseInt(sharedPref.getString("pref_duration", "900000"))*1000;
+    	numberOfSeconds = Integer.parseInt(sharedPref.getString("pref_duration", "900"))*1000;
 
        timer = new CountDownTimer(numberOfSeconds, 1000) {
 
@@ -117,6 +124,8 @@ public class MainActivity extends Activity {
     	
     	return true;
     }
+    
+    
     
   
     

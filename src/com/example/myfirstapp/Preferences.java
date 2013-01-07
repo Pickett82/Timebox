@@ -21,4 +21,6 @@ implements OnSharedPreferenceChangeListener {
 	    	Toast toast = Toast.makeText(getApplicationContext(), "test", Toast.LENGTH_SHORT);
 	    	toast.show();
 	    }
+	  
+	 
 }
